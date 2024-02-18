@@ -14,10 +14,3 @@ async def is_a_crochet_image(image: UploadFile = File(...)):
     image = image.convert('RGB')
     image = image.resize((224, 224))
     return crochet.is_a_crochet(image)
-
-
-@router.post("/isCrochetImageTransformers")
-async def is_a_crochet_image_transformers(image: UploadFile = File(...)):
-    image_data = await image.read()
-    image = Image.open(io.BytesIO(image_data))
-    return crochet.is_a_crochet_transformers(image)
