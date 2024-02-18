@@ -13,4 +13,4 @@ COPY ./service /code/service
 COPY ./model /code/model
 COPY ./filter_model /code/filter_model
 
-CMD ["uvicorn", "app.main:app", "--host", "::", "--port", "10101"]
+CMD ["uvicorn", "app.main:app", "--port", "10101"]
