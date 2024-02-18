@@ -12,5 +12,6 @@ COPY ./controller /code/controller
 COPY ./service /code/service
 COPY ./model /code/model
 COPY ./filter_model /code/filter_model
+COPY ./.env /code/.env
 
 CMD ["uvicorn", "app.main:app", "--env-file", ".env"]
